@@ -938,7 +938,7 @@
 	}
 
 /* Button */
-
+/*
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -1005,7 +1005,7 @@
 				padding: 0;
 			}
 
-		}
+		}*/
 
 /* Header */
 
@@ -1197,4 +1197,5 @@
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
   text-align: center;
+  width: 18em;
 }
