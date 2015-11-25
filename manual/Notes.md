@@ -11,7 +11,7 @@ Basic setup:
 
 
 # For Users:
-[Link to spreadsheet](https://docs.google.com/spreadsheets/d/1pM_jD-7SX7MRxU93OW1rdY-OL3RLxbQr2wK5zZpprGQ/edit?usp=sharing)
+[Link to spreadsheet](https://docs.google.com/spreadsheets/d/1pM_jD-7SX7MRxU93OW1rdY-OL3RLxbQr2wK5zZpprGQ/edit?usp=sharing)  
 [Link to User Guide](https://medium.com/@matthamlin/bundles-manual-user-guide-dd53ae49a5cd#.wpenyqftq)
 
 
