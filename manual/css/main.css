@@ -1024,3 +1024,13 @@ pre.prettyprint{
 article {
     background-color: #d6d2cc;
 }
+.img {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.obj-holder {
+    height: 549px;
+    width: 731px;
+}
