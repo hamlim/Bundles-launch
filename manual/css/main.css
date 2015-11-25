@@ -1030,14 +1030,27 @@ article {
    top: 50%;
    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-.obj-holder {
-    height: 549px;
-    width: 731px;
-    margin-left: 5%;
+@media screen and (min-width: 1200px ) {
+    .obj-holder {
+        height: 682px;
+        width: 910px;
+    }
+    .center-cont {
+        position: relative;
+        top: 60%;
+        left: 50%;
+        margin-left: -455px;
+    }
 }
-.center-cont {
-    position: relative;
-    top: 60%;
-    left: 50%;
-    margin-left: -455px;
+@media screen and (max-width: 800px) {
+    .obj-holder {
+        height: 450px;
+        width: 600px;
+    }
+    .center-cont {
+        position: relative;
+        top: 60%;
+        left: 50%;
+        margin-left: -300px;
+    }
 }
