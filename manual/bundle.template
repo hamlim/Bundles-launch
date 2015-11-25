@@ -13,16 +13,12 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <iframe class="center-cont obj-holder" src="//giphy.com/embed/2lnLUJbP1Qg5W?html5=true" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                    <!--  width="910" height="682" |   <p><a href="http://giphy.com/gifs/monday-cat-2lnLUJbP1Qg5W">via GIPHY</a></p> -->
                 </div>
                 <div class="item">
                     <iframe class="center-cont obj-holder" src="https://www.youtube.com/embed/nRzsgCp60YU" frameborder="0" allowfullscreen></iframe>
-                    <!--  width="910" height="682"  -->
                 </div>
                 <div class="item">
-                    <div class="center-cont obj-holder">
-                        <p> Test </p>
-                    </div>
+                    <iframe class="center-cont obj-holder" src="https://vine.co/v/iznd3vzttIP/embed/postcard" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
                 </div>
             </div>
 
