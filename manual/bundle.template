@@ -18,7 +18,7 @@
                     <iframe class="center-cont obj-holder" src="https://www.youtube.com/embed/nRzsgCp60YU" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="item">
-                    <iframe class="center-cont obj-holder" src="https://vine.co/v/iznd3vzttIP/embed/postcard" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+                    <iframe class="center-cont obj-holder" src="https://vine.co/v/iznd3vzttIP/embed/simple" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
                 </div>
             </div>
 
