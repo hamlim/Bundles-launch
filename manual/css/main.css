@@ -1041,8 +1041,11 @@ article {
         left: 50%;
         margin-left: -455px;
     }
+    #mobile-warning {
+        display: none;
+    }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1200px) {
     .obj-holder {
         height: 450px;
         width: 600px;
@@ -1052,5 +1055,23 @@ article {
         top: 60%;
         left: 50%;
         margin-left: -300px;
+    }
+    #mobile-warning {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .obj-holder {
+        height: 150px;
+        width: 200px;
+    }
+    .center-cont {
+        position: relative;
+        top: 60%;
+        left: 50%;
+        margin-left: -100px;
+    }
+    #mobile-warning {
+        display: block;
     }
 }
