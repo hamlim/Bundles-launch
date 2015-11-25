@@ -49,7 +49,10 @@
                 <div class="collapse navbar-collapse" id="navigation-example-2">
                   <ul class="nav navbar-nav navbar-right">
                       <li>
-                        <button href="#about" class="btn btn-warning btn-simple" data-toggle="modal" data-target="#myModal">About</button>
+                          <button href="#" class="btn btn-info btn-simple">Bundle 1</button>
+                      </li>
+                      <li>
+                          <button href="#about" class="btn btn-warning btn-simple" data-toggle="modal" data-target="#myModal">About</button>
                       </li>
                       <li>
                         <button href="http://twitter.com/makebundles" class="btn btn-danger btn-simple"><i class="fa fa-twitter"></i>@makebundles</button>
@@ -67,7 +70,7 @@
             </div>
             <div class="alert alert-danger" id="mobile-warning">
                 <div class="container text-center">
-                    Bundles is meant to be used on a larger display currently, please open this page on a larger display!
+                    Bundles is not fully mobile optimized right now, please open this page on a larger display!
                 </div>
             </div>
             <section id="content">
@@ -109,7 +112,6 @@
                         </div>
                     </div>
                 </div> <!-- end carousel -->
-
             </section>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="aboutBundlesModal" aria-hidden="true">
                 <div class="modal-dialog">
@@ -149,7 +151,6 @@
         <script src="./paper-assets/js/bootstrap-datepicker.js"></script>
 
         <script src="./paper-assets/js/ct-paper.js"></script>
-        <!-- <script src="./js/app.js"></script> -->
         <script>
             gsdk.initPopovers();
         </script>
