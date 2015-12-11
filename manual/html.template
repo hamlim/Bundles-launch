@@ -12,8 +12,9 @@
         <meta name="application-name" content="{{name}}" />
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="http://www.goexploring.today/manual/{{url}}" />
         <meta property="og:type" content="website" />
+        <meta property="fb:abb_id" content="1213926478624211" />
+        <meta property="og:url" content="http://www.goexploring.today/manual/{{url}}" />
         <meta property="og:title" content="{{name}}" />
         <meta property="og:description" content="A Bundle made by {{name}} of {{content descriptor}}." />
         <meta property="og:image" content="http://www.goexploring.today/manual/assets/{{imagename}}" />
