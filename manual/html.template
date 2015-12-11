@@ -20,6 +20,8 @@
 
         <!-- Twitter Meta Tags -->
         <meta name=”twitter:card” content=”summary_large_image”/>
+        <meta name="twitter:site" content="@makebundles"/>
+        <meta name="twitter:creator" content="@immatthamlin">
         <meta name=”twitter:title” content="{{name}}"/>
         <meta name=”twitter:url” content="http://www.goexploring.today/manual/{{url}}"/>
         <meta name=”twitter:description” content="A Bundle made by {{name}} of {{content descriptor}}."/>
