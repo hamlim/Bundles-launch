@@ -1,0 +1,21 @@
+{
+  "name": "poly",
+  "homepage": "https://github.com/hamlim/hamlim.github.io",
+  "authors": [
+    "hamlim"
+  ],
+  "dependencies": {
+      "polymer": "Polymer/polymer#^1.2.3"
+  },
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

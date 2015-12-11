@@ -11,6 +11,21 @@
         <meta name="author" content="{{name}}" />
         <meta name="application-name" content="{{name}}" />
 
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="http://www.goexploring.today/manual/{{url}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{name}}" />
+        <meta property="og:description" content="A Bundle made by {{name}} of {{content descriptor}}." />
+        <meta property="og:image" content="http://www.goexploring.today/manual/assets/{{imagename}}" />
+
+        <!-- Twitter Meta Tags -->
+        <meta name=”twitter:card” content=”summary_large_image”/>
+        <meta name=”twitter:title” content="{{name}}"/>
+        <meta name=”twitter:url” content="http://www.goexploring.today/manual/{{url}}"/>
+        <meta name=”twitter:description” content="A Bundle made by {{name}} of {{content descriptor}}."/>
+        <meta name=“twitter:image:src” content="http://www.goexploring.today/manual/assets/{{imagename}}"/>
+
+
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicons/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicons/apple-touch-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicons/apple-touch-icon-72x72.png">
