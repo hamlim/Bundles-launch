@@ -1,0 +1,21 @@
+{
+  "name": "bapp",
+  "homepage": "https://github.com/hamlim/hamlim.github.io",
+  "authors": [
+    "hamlim"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.2.3"
+  }
+}
