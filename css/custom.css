@@ -203,3 +203,12 @@
 .white-text {
     color: white;
 }
+.footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 1em;
+}
+.headphones {
+    color: #F9C11C;
+}
