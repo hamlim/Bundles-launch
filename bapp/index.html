@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Bundles</title>
         <!-- Meta tags here -->
@@ -47,126 +47,13 @@
         <meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
         <meta name="theme-color" content="#f1c40f">
 
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild-->
-
-        <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-        <!-- endbuild -->
-
-        <!-- will be replaced with elements/elements.vulcanized.html -->
-        <link rel="import" href="elements/elements.html">
-        <!-- endreplace-->
-
-        <!-- For shared styles, shared-styles.html import in elements.html -->
-        <style is="custom-style" include="shared-styles"></style>
+        <!-- UI Kit -->
+        <link rel="stylesheet" href="uikit.min.css" />
+        <script src="jquery.js"></script>
+        <script src="uikit.min.js"></script>
     </head>
-    <body fullbleed unresolved>
-        <span id="browser-sync-binding"></span>
-        <template is="dom-bind" id="app">
-            <paper-drawer-panel id="paperDrawerPanel">
-                <paper-scroll-header-panel drawer fixed>
-                    <paper-toolbar id="drawerToolbar">
-                        <span class="paper-font-title">Menu</span>
-                    </paper-toolbar>
-                    <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-                        <!--    Links to differen things  -->
-                        <a data-route="home" href="{{baseUrl}}">
-                            <iron-icon icon="home"></iron-icon>
-                            <span>Home</span>
-                        </a>
-                        <a data-route="login" href="{{baseUrl}}login">
-                            <iron-icon icon="account-circle"></iron-icon>
-                            <span>Login/Signup</span>
-                        </a>
-                        <a data-route="contact" href="{{baseUrl}}contact">
-                            <iron-icon icon="communication:forum"></iron-icon>
-                            <span>Contact</span>
-                        </a>
-                    </paper-menu>
-                </paper-scroll-header-panel>
+    <body>
+        
 
-                <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
-                    <paper-toolbar id="mainToolbar" class="tall">
-                        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-                        <span class="flex"></span>
-
-                        <!-- Toolbar icons -->
-                        <!-- <paper-icon-button icon="refresh"></paper-icon-button> -->
-
-                        <!-- App Name -->
-                        <div class="middle middle-container center horizontal layout">
-                            <div class="app-name">
-                                Bundles
-                            </div>
-                        </div>
-                    </paper-toolbar>
-
-                    <!-- Main Content -->
-                    <div class="content">
-                        <iron-pages attr-for-selected="data-route" selected="{{route}}">
-                            <section data-route="home">
-                                <paper-material elevation="1">
-                                    <my-greeting></my-greeting>
-                                    <p class="paper-font-subhead">
-                                        You now have:
-                                    </p>
-                                    <my-list></my-list>
-                                </paper-material>
-                                <paper-material elevation="2">
-                                    <p class="paper-font-body2">
-                                        This is another card.
-                                    </p>
-                                </paper-material>
-                            </section>
-
-                            <section data-route="login">
-                                <paper-material elevation="1">
-                                    <h3 class="page-title">Login or Signup</h3>
-                                    <!-- forms here -->
-                                </paper-material>
-                            </section>
-                            <section data-route="contact">
-                                <paper-material elevation="4">
-                                    <h4 class="page-title">Contact us</h4>
-                                    <iron-pages selected="0" id="demo">
-                                        <div>One</div>
-                                        <div>Two</div>
-                                        <div>Three</div>
-                                    </iron-pages>
-
-                                    <script>
-                                      document.addEventListener('click', function(e) {
-                                        var pages = document.getElementById('demo');
-                                        pages.selectNext();
-                                      });
-                                    </script>
-                                </paper-material>
-                            </section>
-                        </iron-pages>
-                    </div>
-                </paper-scroll-header-panel>
-            </paper-drawer-panel>
-
-            <paper-toast id="toast">
-                <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
-            </paper-toast>
-
-            <paper-toast id="caching-complete"
-                         duration="6000"
-                         text="Caching complete! This app will work offline.">
-            </paper-toast>
-
-            <platinum-sw-register auto-register
-                                  clients-claim
-                                  skip-waiting
-                                  on-service-worker-installed="displayInstalledToast">
-                <platinum-sw-cache default-cache-strategy="fastest"
-                                   cache-config-file="cache-config.json">
-                </platinum-sw-cache>
-            </platinum-sw-register>
-        </template>
-        <script src="scripts/app.js"></script>
     </body>
 </html>
