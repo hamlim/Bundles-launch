@@ -32,21 +32,23 @@
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
-  background-image: url('../images/water.jpeg');
+  background-image: url('../images/yellow.jpeg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
 }
 .value-multiplier {
   margin-bottom: .5rem;
-  color: #f1c40f; /* 11DFC7 */
+  color: #FF5722; /* 11DFC7 */
 }
+
 .value-heading {
   margin-bottom: .3rem;
 }
 .value-description {
   opacity: .9;
   font-weight: 500;
+  color: #4A90E2;
 }
 
 /* Help
