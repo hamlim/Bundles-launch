@@ -58,7 +58,7 @@
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('../images/values-bg.jpg');
+  background-image: url('../images/woods.jpeg');
   background-size: cover;
   color: #fff;
 }
@@ -148,4 +148,9 @@
     top: -14rem;
     max-height: 570px;
   }
+}
+
+.button-primary {
+    border-color: #4A90E2 !important;
+    background-color: #4A90E2 !important;
 }
