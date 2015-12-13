@@ -1,79 +1,146 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Bundles</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
 
-		<!-- Meta Tags -->
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Bundles</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-		<meta name="description" content="Make and share collections of digital content.">
-        <meta name="author" content="Matt Hamlin">
-        <!-- Chrome Mobile Color -->
-        <meta name="theme-color" content="#FFC107">
-        <!-- Twitter card stuff -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@makebundles" />
-        <meta name="twitter:creator" content="@immatthamlin" />
-        <meta name="twitter:title" content="Bundles" />
-        <meta name="twitter:description" content="Signup to be the first people to make and share Bundles." />
-        <meta name="twitter:image" content="http://www.goexploring.today/images/Bundles Logo.png" />
-        <meta name="twitter:url" content="http://www.goexploring.today/index.html" />
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-		<link rel="shortcut icon" type="image/x-icon" href="/images/Bundles Logo.ico" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/skeleton.css">
+        <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Bundles</h1>
-				<p>Make and share collections of digital content.</p>
-			</header>
+        <!-- Scripts
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-		<!-- Signup Form -->
-		<div id="signup-form">
-			<button type="button" onclick="location.href='http://eepurl.com/bCSkHv';" value="Get More Info">Signup</button>
-		</div>
-			<!-- <a class="button" id="signup-form" href="http://eepurl.com/bCSkHv" title="Signup!">Get more info</a> -->
-			<!-- <form id="signup-form" action="http://eepurl.com/bCSkHv">
-				<button type="button"  value="Sign Up" />
-			</form> -->
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <link rel="icon" type="image/png" href="../../dist/images/favicon.png"> -->
+        <!-- Meta tags here -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
+        <!-- Facebook Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.goexploring.today/launch.html" />
+        <meta property="fb:app_id" content="1213926478624211" />
+        <meta property="og:title" content="Bundles" />
+        <meta property="og:description" content="Make and share collections of digital content." />
+        <meta property="og:image" content="http://www.goexploring.today/assets/bundleslogomaster.png" />
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="http://twitter.com/makebundles" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="mailto:makebundles@outlook.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Bundles 2015.</li>
-				</ul>
-			</footer>
+        <!-- Twitter Meta Tags -->
+        <meta name=”twitter:card” content=”summary_large_image”/>
+        <meta name="twitter:site" content="@makebundles"/>
+        <meta name="twitter:creator" content="@immatthamlin">
+        <meta name=”twitter:title” content="Bundles"/>
+        <meta name=”twitter:url” content="http://www.goexploring.today/launch.html"/>
+        <meta name=”twitter:description” content="Make and share collections of digital content."/>
+        <meta name=“twitter:image:src” content="http://www.goexploring.today/assets/bundleslogomaster.png"/>
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<!-- Google Analytics -->
-			<script>
-			  (functifor on(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./assets/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./assets/favicons/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="./assets/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./assets/favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./assets/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./assets/favicons/manifest.json">
+        <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#f1c40f">
+        <meta name="apple-mobile-web-app-title" content="Bundles">
+        <meta name="application-name" content="Bundles">
+        <meta name="msapplication-TileColor" content="#f1c40f">
+        <meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
+        <meta name="theme-color" content="#f1c40f">
 
-			  ga('create', 'UA-68962563-1', 'auto');
-			  ga('send', 'pageview');
+    </head>
+    <body>
 
-			</script>
-	</body>
+          <!-- Primary Page Layout
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+          <div class="section hero">
+              <div class="container">
+                  <div class="row">
+                      <div class="one-half column">
+                          <h4 class="hero-heading">Make and share collections of content with others.</h4>
+                          <a class="button button-primary" href="http://eepurl.com/bCTMe9">Try Bundles</a> <!-- href="http://goexploring.today/app/"  http://eepurl.com/bCSkHv-->
+                      </div>
+                      <div class="one-half column phones">
+                          <img class="phone big" src="./assets/bundleslogomaster.png"/>
+                          <img class="phone small" src="images/iphone-fix.png"/>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="section values">
+              <div class="container">
+                  <div class="row">
+                      <div class="three columns value">
+                          <h2 class="value-multiplier">Images</h2>
+                          <img class="value-image" src="./assets/pictureedit.png" height="35px" width="50px"/>
+                          <h6 class="value-description">Share collections of images with your friends!</h6>
+                      </div>
+                      <div class="three columns value">
+                          <h2 class="value-multiplier">Videos</h2>
+                          <img class="value-image" src="./assets/videoedit.png" height="35px" width="50px"/>
+                          <h6 class="value-description">Share Youtube, Vimeo, and other videos!</h6>
+                      </div>
+                      <div class="three columns value">
+                          <h2 class="value-multiplier">Gifs</h2>
+                          <img class="value-image" src="./assets/gifedit.png" height="35px" width="50px"/>
+                          <h6 class="value-description">Share that perfect animated gif of a cat!</h6>
+                      </div>
+                      <div class="three columns value">
+                          <h2 class="value-multiplier">&amp; More</h2>
+                          <img class="value-image" src="./assets/otheredit.png" height="35px" width="50px"/>
+                          <h6 class="value-description">Share Vines, songs, and almost anything else!</h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="section get-help">
+              <div class="container">
+                  <h3 class="section-heading">Want to start making your own Bundles?</h3>
+                  <p class="section-description">To start making your own bundles click the button below to signup and share collections of content with others!</p>
+                  <a class="button button-primary" href="http://eepurl.com/bCTMe9">Signup</a>
+              </div>
+          </div>
+
+          <div class="section categories">
+              <div class="container">
+                  <h3 class="section-heading">Bundles Made by the Community</h3>
+                  <p class="section-description">Here are some Bundles made by others in the community, check them out!</p>
+                  <div class="row">
+                      <div class="one-full column value">
+                          <h4 class="value-multiplier center white-text">Coming Soon!</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    <!-- End Document
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </body>
 </html>
