@@ -1,0 +1,10 @@
+
+.color-white {
+    background-color: white;
+}
+.color-gray {
+    background-color: #eeeeee;
+}
+.no-margin-right {
+    margin-right: 0 !important;
+}
