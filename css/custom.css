@@ -39,7 +39,7 @@
 }
 .value-multiplier {
   margin-bottom: .5rem;
-  color: #FF5722; /* 11DFC7 */
+  color: black; /* 11DFC7    red FF5722*/
 }
 
 .value-heading {
@@ -49,7 +49,7 @@
   opacity: .9;
   font-weight: 500;
   font-size: 20px;
-  color: #4A90E2;
+  color: black; /* blue 4A90E2 */
 }
 
 /* Help
