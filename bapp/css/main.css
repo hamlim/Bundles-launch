@@ -8,3 +8,14 @@
 html {
     background-color: #F1C40F;
 }
+
+.uk-navbar-flip {
+    margin-right: 10px;
+}
+.uk-dropdown {
+    width: 100px;
+}
+.uk-container {
+    margin-left: auto;
+    margin-right: auto;
+}
