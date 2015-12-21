@@ -1,6 +1,5 @@
 var currentLinks = [],
   d = document,
-  sometest = false,
   w = window;
 $(d).ready( function() {
     //ok when someone clicks on the div, we want a small form to pop-below the div and to allow them to input a links
@@ -19,12 +18,17 @@ $(d).ready( function() {
         //ok so `This` refers to the dom node
         UIkit.modal.prompt("Link: ", '', function(value){
             //here we have access to value which will be a link
-            console.log(value + " 19");
-            if(value != ''){
-                sometest = true;
+            var alreadycheck = true;
+            for(var i=0; i<currentLinks.length; i++){
+                if (value === currentLinks[i]){
+                    alreadycheck = false;
+                    UIkit.modal.alert("You have already added that Link!");
+                }
+            }
+            if(value != '' && alreadycheck){
                 currentLinks.push(value);
                 elem.className = "plus-button two columns activated";
-                elem.innerHTML = "<i class='fa fa-times plus-icon'></i>";
+                elem.innerHTML = "<i class='fa fa-check plus-icon'></i>";
                 elem.parentNode.appendChild(newBtn);
                 linkanchor.setAttribute('href', value);
                 linkanchor.setAttribute('class', 'link');
@@ -35,7 +39,6 @@ $(d).ready( function() {
                 dellink.setAttribute('data-bundle-link', value);
                 dellink.innerHTML = "Click here to delete this link!";
                 linkli.appendChild(dellink);
-                console.log(linkli);
                 d.getElementById('current-links').appendChild(linkli);
             }
         });
