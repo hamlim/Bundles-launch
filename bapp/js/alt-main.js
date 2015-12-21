@@ -2,9 +2,8 @@ var currentLinks = [],
   d = document,
   w = window;
 $(d).ready( function() {
-    //ok when someone clicks on the div, we want a small form to pop-below the div and to allow them to input a links
-    //this form will have a simple label, a lightblue? background, and an input field, and another button
-    //when the last button in the form above is clicked the link is pushed to a simple status array, stored as status[link-number]=link
+    //ok so we want people to add content, when they click on the .can-click divs
+    //a modal pops up that allows them to add content to their bundle 
     $('#plus-button-container').on('click','div.can-click' , function () {
         //ok time to append a small form
         var newBtn = d.createElement('div');
