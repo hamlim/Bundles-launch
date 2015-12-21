@@ -43,6 +43,10 @@ input {
     top: 28%;
 }
 
+.delete-link:hover {
+    cursor: pointer;
+}
+
 ::-webkit-input-placeholder {
    text-align: center;
 }

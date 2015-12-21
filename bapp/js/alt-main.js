@@ -24,15 +24,38 @@ $(d).ready( function() {
                 sometest = true;
                 currentLinks.push(value);
                 elem.className = "plus-button two columns activated";
-                elem.innerHTML = "<i class='fa fa-check plus-icon'></i>";
+                elem.innerHTML = "<i class='fa fa-times plus-icon'></i>";
                 elem.parentNode.appendChild(newBtn);
                 linkanchor.setAttribute('href', value);
                 linkanchor.setAttribute('class', 'link');
                 linkanchor.innerHTML = value;
                 linkli.appendChild(linkanchor);
+                var dellink = d.createElement('p');
+                dellink.setAttribute('class',  'delete-link');
+                dellink.setAttribute('data-bundle-link', value);
+                dellink.innerHTML = "Click here to delete this link!";
+                linkli.appendChild(dellink);
+                console.log(linkli);
                 d.getElementById('current-links').appendChild(linkli);
             }
         });
+    });
+    $('#current-links').on('click','p.delete-link' , function () {
+        //ok so you clicked on the p tag, now we want to remove the li element (this.parentNode), the link within the array, and a checked off div above
+        var parentElem = this.parentNode;
+        var lenOfCurrentLinks = currentLinks.length;
+        for (var k=0; k<lenOfCurrentLinks; k++){
+            if(currentLinks[k] === this.getAttribute('data-bundle-link')){
+                //ok now we want to pop that from the array
+                currentLinks.splice(k,1);
+                //now we want to remove the li element (parentElem)
+                var parentOfParentElem = parentElem.parentNode;
+                parentOfParentElem.removeChild(parentElem);
+                //now we want to remove one of the activated divs above
+                d.getElementsByClassName('activated')[0].parentNode.removeChild(d.getElementsByClassName('activated')[0]);
+            }
+        }
+
     });
     console.log(currentLinks);
 });
