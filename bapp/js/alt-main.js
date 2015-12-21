@@ -13,6 +13,8 @@ $(d).ready( function() {
         var plusIcon = d.createElement('i');
         plusIcon.setAttribute('class', 'fa fa-plus plus-icon');
         newBtn.appendChild(plusIcon);
+        var linkli = d.createElement('li');
+        var linkanchor = d.createElement('a');
         var elem = this;
         //ok so `This` refers to the dom node
         UIkit.modal.prompt("Link: ", '', function(value){
@@ -24,6 +26,11 @@ $(d).ready( function() {
                 elem.className = "plus-button two columns activated";
                 elem.innerHTML = "<i class='fa fa-check plus-icon'></i>";
                 elem.parentNode.appendChild(newBtn);
+                linkanchor.setAttribute('href', value);
+                linkanchor.setAttribute('class', 'link');
+                linkanchor.innerHTML = value;
+                linkli.appendChild(linkanchor);
+                d.getElementById('current-links').appendChild(linkli);
             }
         });
     });
