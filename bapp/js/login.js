@@ -23,7 +23,7 @@ $(document).ready(function (){
                         //now we also want to get all the lists that the user owns
                         var xhr = new XMLHttpRequest();
                         // xhr.withCredentials = true;
-                        xhr.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Lists");
+                        xhr.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/testLists");
                         xhr.setRequestHeader("authorization", "Bearer keyIye3zskPSBMQ6Q");
                         xhr.addEventListener("readystatechange", function () {
                             if (this.readyState === 4) {
@@ -35,7 +35,7 @@ $(document).ready(function (){
                                     //now we have access to see if things match
                                     var testarray = [];
                                     testarray.push(usertempid);
-                                    if(records[k].fields.Users[0] === testarray[0]) {
+                                    if(records[k].fields.testUsers[0] === testarray[0]) {
                                         //now we want to push this with the name to the userBundles array
                                         var bundle = {};
                                         bundle.name = records[k].fields.list_Name;

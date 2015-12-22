@@ -100,7 +100,7 @@ $(d).ready( function() {
                 makeBundleName.setAttribute('class', 'uk-form-danger');
                 makeBundleName.focus();
             } else {
-                if(currentLinks.length <= 3){
+                if(currentLinks.length < 2){
                     UIkit.modal.alert("We suggest you add more content to a Bundle.");
                 } else {
                     //ok we passed all the checks
@@ -119,6 +119,7 @@ $(d).ready( function() {
                     var sendobj = {};
                     sendobj.fields = updateobj;
                     // ok we want to send this to the database
+                    console.log(sendobj);
                     var data = JSON.stringify(sendobj);
 
                     var xhr = new XMLHttpRequest();
@@ -163,7 +164,7 @@ $(d).ready( function() {
                       }
                     });
 
-                    xhr.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Lists");
+                    xhr.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/testLists", true);
                     xhr.setRequestHeader("authorization", "Bearer keyIye3zskPSBMQ6Q");
                     xhr.setRequestHeader("content-type", "application/json");
 
