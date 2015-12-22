@@ -38,7 +38,7 @@ $(d).ready( function() {
             var linkanchor = d.createElement('a');
             var elem = this;
             //ok so `This` refers to the dom node
-            UIkit.modal.prompt("Link: ", '', function(value){
+            UIkit.modal.prompt("Link (Youtube, Vimeo, Imgur, Giphy, Vine Only): ", '', function(value){
                 //here we have access to value which will be a link
                 var alreadycheck = true;
                 for(var i=0; i<currentLinks.length; i++){
