@@ -5,7 +5,7 @@ $(document).ready(function (){
         var emailelem = d.getElementById('login-email'),
             passwordelem = d.getElementById('login-password');
         var req = new XMLHttpRequest();
-        req.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Users?limit=100&view=Main%20View", true);
+        req.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/testUsers?limit=100&view=Main%20View", true);
         req.setRequestHeader("Authorization", "Bearer keyIye3zskPSBMQ6Q");
         req.onreadystatechange = function () {
             if (req.readyState != 4 || req.status != 200) return;
