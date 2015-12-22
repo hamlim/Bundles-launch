@@ -115,7 +115,7 @@ $(d).ready( function() {
                     var updateobj = {};
                     updateobj.list_Name = bundleName;
                     updateobj.links = cslinks;
-                    updateobj.Users = useridArr;
+                    updateobj.testUsers = useridArr;
                     var sendobj = {};
                     sendobj.fields = updateobj;
                     // ok we want to send this to the database
