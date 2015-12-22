@@ -14,7 +14,7 @@ $(d).ready( function() {
         // render the top navbar properly
         var navbar = d.getElementById('navbar-mustache');
         var template = "<i class='fa fa-bars'></i> {{ username }} ";
-        var rendered = Mustache.render(template, user);
+        var rendered = Mustache.render(template, user.fields);
         navbar.innerHTML = rendered;
 
         // --------------------------------------------------------------------
@@ -88,9 +88,113 @@ $(d).ready( function() {
         //now we want to handle the big blue button
         //first we want to make sure that there is some content in the currentLinks array
         //then we want to check that there has been some text input in the Bundle Name input
+        var makeBundleBtn = d.getElementById('make-bundle-btn');
+        var makeBundleName = d.getElementById('bundle-name');
 
+        //ok so we want to check and see if there is something in the name input field on the button clicked
+        $(makeBundleBtn).click(function() {
+            //ok so check the input
+            if(makeBundleName.value === ''){
+                //error there is no name
+                UIkit.modal.alert("Error: You need to add a name to your Bundle!");
+                makeBundleName.setAttribute('class', 'uk-form-danger');
+                makeBundleName.focus();
+            } else {
+                if(currentLinks.length <= 3){
+                    UIkit.modal.alert("We suggest you add more content to a Bundle.");
+                } else {
+                    //ok we passed all the checks
+                    var bundleName = makeBundleName.value;
+                    var userID = user.id;
+                    var useridArr = [];
+                    useridArr.push(userID);
+                    //currentLinks is all our links for the bundle
+                    //user is the user object
+                    // ok so we need to make a string that is comma seperated of all of the links
+                    var cslinks = currentLinks.join(', ');
+                    var updateobj = {};
+                    updateobj.list_Name = bundleName;
+                    updateobj.links = cslinks;
+                    updateobj.Users = useridArr;
+                    var sendobj = {};
+                    sendobj.fields = updateobj;
+                    // ok we want to send this to the database
+                    var data = JSON.stringify(sendobj);
 
+                    var xhr = new XMLHttpRequest();
+                    var returnObj = {};
+                    xhr.addEventListener("readystatechange", function () {
+                      if (this.readyState === 4) {
+                        console.log(this.responseText);
+                        returnObj = JSON.parse(this.responseText);
+                        console.log(returnObj);
+                        //now we want to add that to an array of current lists that the user owns
+                        //we also need to clear the added elements
+                        //and clear the current queue
+                        //and push an alert stating that it worked
+
+                        // <div class="uk-alert" data-uk-alert> For an alert
+                        //     <a href="" class="uk-alert-close uk-close"></a>
+                        //     <p>...</p>
+                        // </div>
+                        var returnbundle = returnObj.fields;
+                        console.log(returnbundle);
+                        var toAddBundle = {};
+                        toAddBundle.name = returnbundle.list_Name;
+                        toAddBundle.sharekey = returnbundle.listID;
+                        toAddBundle.links = returnbundle.links.split(', ');
+                        var getBundles = JSON.parse(localStorage.getItem('usersBundles'));
+                        getBundles.push(toAddBundle);
+                        localStorage.setItem('usersBundles', JSON.stringify(getBundles));
+                        //now clear the queue
+                        currentLinks = [];
+                        //now remove all elements with class activated
+                        $('.activated').remove();
+                        // for(var v=0; v<d.getElementsByClassName('activated').length; v++){
+                        //     d.getElementsByClassName('activated')[v].parentNode.removeChild(d.getElementsByClassName('activated')[v]);
+                        // }
+                        makeBundleName.value = '';
+                        //now clear the ul of the queue
+                        d.getElementById('current-links').innerHTML = "";
+                        //now add the alert to the document
+                        d.getElementById('alert-container').innerHTML = "<div class='uk-alert' data-uk-alert><a href='' class='uk-alert-close uk-close'></a><p>Added bundle to your Bundles!</p></div>";
+                        //now to add it to the users bundles ul on the page
+                        d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/bundles/bundle?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
+                      }
+                    });
+
+                    xhr.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Lists");
+                    xhr.setRequestHeader("authorization", "Bearer keyIye3zskPSBMQ6Q");
+                    xhr.setRequestHeader("content-type", "application/json");
+
+                    xhr.send(data);
+                    //done
+
+                }
+            }
+        });
+
+        //ok now we want to load in the user's Bundles
+        var usersBundles = JSON.parse(localStorage.getItem('usersBundles'));
+        var attachPointBundles = d.getElementById('load-Bundles-here');
+        var usersBundlesTemplate = "<li class=''><a href='http://goexploring.today/bundles/bundle?sharekey={{sharekey}}'> {{name}}</a></li>";
+        var currentadditionelems = "";
+        for(var j=0; j<usersBundles.length; j++){
+            var renderedbundles = Mustache.render(usersBundlesTemplate, usersBundles[j]);
+            currentadditionelems += renderedbundles;
+        }
+        attachPointBundles.innerHTML = currentadditionelems;
     }
 
-    
+
 });
+
+function logoutUser() {
+    //user clicked on the logout button/link
+    //we want to redirect to the index page, and also clear the localStorage
+    //first remove the data
+    // TODO insert check for remember me setting at login
+    localStorage.removeItem("currentUser");
+    user = "";
+    w.location.href = "./index.html";
+}

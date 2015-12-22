@@ -22,7 +22,7 @@ $(d).ready(function() {
         // render the top navbar properly
         var navbar = d.getElementById('navbar-mustache');
         var template = "<i class='fa fa-bars'></i> {{ username }} ";
-        var rendered = Mustache.render(template, user);
+        var rendered = Mustache.render(template, user.fields);
         navbar.innerHTML = rendered;
 
         // --------------------------------------------------------------------

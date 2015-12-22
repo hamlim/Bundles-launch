@@ -11,10 +11,12 @@ $(document).ready(function (){
             var req = new XMLHttpRequest();
             req.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Users", true);
             req.setRequestHeader("Authorization", "Bearer keyIye3zskPSBMQ6Q");
-            req.setRequestHeader("Content-Type", "applciation/json")
+            req.setRequestHeader("Content-Type", "applciation/json");
+            var postresp;
             req.onreadystatechange = function () {
                 if (req.readyState != 4 || req.status != 200) return;
                 // console.log("Success: " + req.responseText);
+                postresp = JSON.parse(req.responseText);
             };
             var obj = {};
             obj.email = emailelem.value;
@@ -28,7 +30,7 @@ $(document).ready(function (){
             data.fields = obj;
             // console.log(data);
             req.send(data);
-            localStorage.setItem("currentUser", JSON.stringify(obj));
+            localStorage.setItem("currentUser", JSON.stringify(postresp));
             window.location.href = "./app.html";
         } else {
             //passwords did not match
