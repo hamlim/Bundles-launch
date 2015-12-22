@@ -3,7 +3,7 @@ var currentLinks = [],
   w = window;
 $(d).ready( function() {
     //ok so we want people to add content, when they click on the .can-click divs
-    //a modal pops up that allows them to add content to their bundle 
+    //a modal pops up that allows them to add content to their bundle
     $('#plus-button-container').on('click','div.can-click' , function () {
         //ok time to append a small form
         var newBtn = d.createElement('div');
@@ -33,16 +33,16 @@ $(d).ready( function() {
                 linkanchor.setAttribute('class', 'link');
                 linkanchor.innerHTML = value;
                 linkli.appendChild(linkanchor);
-                var dellink = d.createElement('p');
+                var dellink = d.createElement('span');
                 dellink.setAttribute('class',  'delete-link');
                 dellink.setAttribute('data-bundle-link', value);
-                dellink.innerHTML = "Click here to delete this link!";
+                dellink.innerHTML = "  Click here to delete this link!";
                 linkli.appendChild(dellink);
                 d.getElementById('current-links').appendChild(linkli);
             }
         });
     });
-    $('#current-links').on('click','p.delete-link' , function () {
+    $('#current-links').on('click','span.delete-link' , function () {
         //ok so you clicked on the p tag, now we want to remove the li element (this.parentNode), the link within the array, and a checked off div above
         var parentElem = this.parentNode;
         var lenOfCurrentLinks = currentLinks.length;
@@ -60,4 +60,12 @@ $(d).ready( function() {
 
     });
     console.log(currentLinks);
+
+
+    //now we want to handle the big blue button
+    //first we want to make sure that there is some content in the currentLinks array
+    //then we want to check that there has been some text input in the Bundle Name input
+    
+
+
 });
