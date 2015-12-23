@@ -61,14 +61,11 @@
 
         <!-- Mustache -->
         <script src="./js/mustache.js"></script>
-
-        <!-- App Scripts -->
-        <script src="./js/b-main.js"></script>
     </head>
     <body>
-        <!-- This is a login/signup page -->
+        <!-- This is a bundle page page -->
         <header>
-            <nav class="uk-navbar">
+            <!-- <nav class="uk-navbar">
                 <div class="uk-navbar-nav">
                     <a class="uk-navbar-brand" href="#"><img src="./assets/bundleslogomaster.png" height="30" width="30"/> Bundles</a>
                 </div>
@@ -78,7 +75,7 @@
                             <a href="" id="navbar-mustache">More</a>
                             <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" style="top: 41px; left: 0px;">
                                 <ul class="uk-nav uk-nav-navbar">
-                                    <li><a href="./settings.html"><i class="fa fa-cog"></i> Settings</a></li> <!-- TODO -->
+                                    <li><a href="./settings.html"><i class="fa fa-cog"></i> Settings</a></li>
                                     <li class="uk-nav-divider"></li>
                                     <li><a href="javascript:;" onclick="logoutUser();"><i class="fa fa-sign-out"></i> Logout</a></li>
                                 </ul>
@@ -86,49 +83,26 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
         </header>
-        <article class="container">
-            <div id="alert-container">
-            </div>
-            <h1>Make a Bundle:</h1>
-            <div>
-                <section id="make-bundle-parent" class="uk-block-muted">
-                    <div class="row">
-                        <div class="one-third column offset-by-one-third uk-text-center">
-                            <!-- Name -->
-                            <form>
-                                <input class="" id="bundle-name" placeholder="Bundle Name">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="" id="plus-button-container">
-                            <div class="can-click plus-button two columns">
-                                <i class="fa fa-plus plus-icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="one-third column offset-by-one-third uk-text-center uk-margin-large-top">
-                            <button class="uk-button uk-button-primary" id="make-bundle-btn">Make Bundle</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h5>Current Bundle Content</h5>
-                        <ol id="current-links">
-                        </ol>
-                    </div>
-                </section>
-            </div>
-            <h1 class="uk-margin-top">Your Bundles:</h1>
-            <div class="">
-                <section id="" class="uk-block-muted">
-                    <ul id="load-Bundles-here">
+        <article class="container" id="viewer">
 
-                    </ul>
-                </section>
-            </div>
         </article>
+        <script type="javascript">
+        function getQueryVariable(variable){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return pair[1];}
+            }
+            return(false);
+        };
+
+        var sharekey = getQueryVariable("sharekey");
+
+        </script>
+        <!-- App Scripts -->
+        <script src="../bapp/js/viewer.js"></script>
     </body>
 </html>
