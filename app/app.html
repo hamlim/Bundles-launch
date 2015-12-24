@@ -50,19 +50,20 @@
         <!-- UI Kit -->
         <link rel="stylesheet" href="./css/uikit.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/skeleton.css" />
+        <link rel="stylesheet" href="./css/app.css" />
         <script src="./js/jquery.min.js"></script>
         <script src="./js/uikit.min.js"></script>
 
         <!-- Routing -->
-        <script src="./js/history.js"></script>
-        <script src="./js/staterouter.js"></script>
+        <!-- <script src="./js/history.js"></script>
+        <script src="./js/staterouter.js"></script> -->
 
         <!-- Mustache -->
         <script src="./js/mustache.js"></script>
 
         <!-- App Scripts -->
-        <script src="./js/main.js"></script>
+        <script src="./js/b-main.js"></script>
     </head>
     <body>
         <!-- This is a login/signup page -->
@@ -77,8 +78,8 @@
                             <a href="" id="navbar-mustache">More</a>
                             <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" style="top: 41px; left: 0px;">
                                 <ul class="uk-nav uk-nav-navbar">
-                                    <li><a href="./settings.html"><i class="fa fa-cog"></i> Settings</a></li> <!-- TODO -->
-                                    <li class="uk-nav-divider"></li>
+                                    <!-- <li><a href="./settings.html"><i class="fa fa-cog"></i> Settings</a></li>  -->
+                                    <!-- <li class="uk-nav-divider"></li> -->
                                     <li><a href="javascript:;" onclick="logoutUser();"><i class="fa fa-sign-out"></i> Logout</a></li>
                                 </ul>
                             </div>
@@ -87,42 +88,46 @@
                 </div>
             </nav>
         </header>
-        <article class="uk-container">
-            <div class="uk-grid uk-text-center">
-                <section id="make" class="uk-width-1-1 uk-container-center uk-margin-top">
-                    <h1 id="make-bundle-button" class="">Make A Bundle</h1>
-                </section>
-                <section class="uk-width-1-1 uk-container-center uk-margin-top" id="bundle-form">
-                    <div class="">
-                        <form class="uk-form" id="bundle-form">
-                            <fieldset data-uk-margin id="bundle-fieldset">
-                                <div class="uk-form-row">
-                                    <!-- Num of links  -->
-                                    <label class="uk-form-label" for="num-of-links">How many links are in your Bundle? </label>
-                                    <input type="number" class="uk-form" placeholder="5" max="15" min="0" id="num-of-links"/>
-                                    <button id="num-of-links-btn" class="uk-button uk-button-mini uk-button-success" type="button" >Select</button>
-                                </div>
-                                <div class="form-group" id="attach-form-content">
-
-                                </div>
-                                <!--
-                                 Select type of content
-                                <label for="content-type">Select the kind of content: </label>
-                                <select name="content-type" id="content-type">
-                                    <option value="video">
-                                        Video
-                                    </option>
-                                    <option value="image">
-                                        Image
-                                    </option>
-                                </select>
-                                <button class="uk-button uk-button-mini uk-button-success" id="select-content-type">Select Content Type</button>
-
-                                -->
-
-                            </fieldset>
-                        </form>
+        <article class="container">
+            <div id="alert-container">
+            </div>
+            <h1>Make a Bundle:</h1>
+            <div>
+                <section id="make-bundle-parent" class="uk-block-muted">
+                    <div class="row">
+                        <div class="one-third column offset-by-one-third uk-text-center">
+                            <!-- Name -->
+                            <form>
+                                <input class="" id="bundle-name" placeholder="Bundle Name">
+                                <input class="" id="bundle-description" placeholder="Short description">
+                            </form>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="" id="plus-button-container">
+                            <div class="can-click plus-button two columns">
+                                <i class="fa fa-plus plus-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one-third column offset-by-one-third uk-text-center uk-margin-large-top">
+                            <button class="uk-button uk-button-primary" id="make-bundle-btn">Make Bundle</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5>Current Bundle Content</h5>
+                        <ol id="current-links">
+                        </ol>
+                    </div>
+                </section>
+            </div>
+            <h1 class="uk-margin-top">Your Bundles:</h1>
+            <div class="">
+                <section id="" class="uk-block-muted">
+                    <ul id="load-Bundles-here">
+
+                    </ul>
                 </section>
             </div>
         </article>

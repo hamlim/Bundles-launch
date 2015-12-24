@@ -32,14 +32,14 @@ $(document).ready(function (){
                     console.log(this.responseText);
                     localStorage.setItem("currentUser", JSON.stringify(JSON.parse(this.responseText)));
                     // we need to also add a demo bundle
-                    var strin = "https://www.youtube.com/watch?v=_swivbEsD50, https://www.youtube.com/watch?v=g_U6yOM3pnw, https://www.youtube.com/watch?v=xzpndHtdl9A, https://www.youtube.com/watch?v=Z8shhcRx7Hk, https://www.youtube.com/watch?v=7T2oje4cYxw, https://www.youtube.com/watch?v=hrjs1UXC8rU, https://youtu.be/1ZLN9AzxVa8, https://youtu.be/myG0dFbfCHk";
+                    var strin = "https://www.youtube.com/watch?v=_swivbEsD50, https://www.youtube.com/watch?v=g_U6yOM3pnw, https://www.youtube.com/watch?v=xzpndHtdl9A, https://www.youtube.com/watch?v=Z8shhcRx7Hk, https://www.youtube.com/watch?v=7T2oje4cYxw, https://www.youtube.com/watch?v=hrjs1UXC8rU, https://youtube.com/watch?v=1ZLN9AzxVa8, https://youtube.com/watch?v=myG0dFbfCHk";
                     var localDemoBundle = {}
                     localDemoBundle.name = "Demo Bundle";
-                    localDemoBundle.sharekey = "demo";
+                    localDemoBundle.sharekey = "Demo";
                     localDemoBundle.links = strin.split(', ');
                     var localDemo = JSON.stringify(localDemoBundle);
                     localStorage.setItem('usersBundles', localDemo);
-                    window.location.href = "./changed-app.html";
+                    window.location.href = "./app.html";
                 }
             });
 
