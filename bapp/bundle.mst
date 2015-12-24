@@ -70,10 +70,10 @@
         <h5>Made By: {{ownerName}}</h5>
     </div>
     <div class="row">
-        <a href="tweet" class="one-half column twitter vert-align">
+        <a href="https://twitter.com/share?url=http://goexploring.today/app/bundle.html?sharekey={{sharekey}}&text=Check+out+this+bundle+:+{{name}}" class="one-half column twitter vert-align">
             <i class="fa fa-twitter text-white"></i>
         </a>
-        <a href="facebook" class="one-half column facebook vert-align">
+        <a href="http://www.facebook.com/sharer.php?u=http://goexploring.today/app/bundle.html?sharekey={{sharekey}}&t={{name}}" class="one-half column facebook vert-align">
             <i class="fa fa-facebook text-white"></i>
         </a>
     </div>

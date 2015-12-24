@@ -25,6 +25,7 @@ $(document).ready(function(){
         getTemp.send();
 
         var bundles = {};
+        bundles.sharekey = sharekey;
         var firstName = "Matt"; //final version needs to get the person who owns the list and get their name
         var lastName = "Hamlin";
         bundles.name = "Demo Bundle";
@@ -152,6 +153,7 @@ $(document).ready(function(){
         getTemp.send();
 
         var bundles = {};
+        bundles.sharekey = sharekey;
 
         $.ajax(settings).done(function (response) {
             // console.log(response);
