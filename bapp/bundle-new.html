@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="doc-white">
     <head>
         <title>Bundles</title>
         <!-- Meta tags here -->
@@ -47,89 +47,55 @@
         <meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
         <meta name="theme-color" content="#f1c40f">
 
-        <!-- UI Kit -->
-        <link rel="stylesheet" href="./css/uikit.min.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./css/normalize.css" />
         <link rel="stylesheet" href="./css/skeleton.css" />
-        <link rel="stylesheet" href="./css/app.css" />
-        <script src="./js/jquery.min.js"></script>
-        <script src="./js/uikit.min.js"></script>
-
-        <!-- Routing -->
-        <!-- <script src="./js/history.js"></script>
-        <script src="./js/staterouter.js"></script> -->
-
+        <link rel="stylesheet" type="text/css" href="./css/bundle.css"/>
         <!-- Mustache -->
+        <script src="./js/jquery.min.js"></script>
         <script src="./js/mustache.js"></script>
-
-        <!-- App Scripts -->
-        <script src="./js/b-main.js"></script>
+        <script src="./js/viewer.js"></script>
     </head>
-    <body>
-        <!-- This is a login/signup page -->
-        <header>
-            <nav class="uk-navbar">
-                <div class="uk-navbar-nav">
-                    <a class="uk-navbar-brand" href="#"><img src="./assets/bundleslogomaster.png" height="30" width="30"/> Bundles</a>
-                </div>
-                <div class="uk-navbar-flip">
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-parent" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                            <a href="" id="navbar-mustache">More</a>
-                            <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom" style="top: 41px; left: 0px;">
-                                <ul class="uk-nav uk-nav-navbar">
-                                    <!-- <li><a href="./settings.html"><i class="fa fa-cog"></i> Settings</a></li>  -->
-                                    <!-- <li class="uk-nav-divider"></li> -->
-                                    <li><a href="javascript:;" onclick="logoutUser();"><i class="fa fa-sign-out"></i> Logout</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <article class="container">
-            <div id="alert-container">
-            </div>
-            <h1>Make a Bundle:</h1>
-            <div>
-                <section id="make-bundle-parent" class="uk-block-muted">
-                    <div class="row">
-                        <div class="one-third column offset-by-one-third uk-text-center">
-                            <!-- Name -->
-                            <form>
-                                <input class="" id="bundle-name" placeholder="Bundle Name">
-                                <input class="" id="bundle-description" placeholder="Short description">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="" id="plus-button-container">
-                            <div class="can-click plus-button two columns">
-                                <i class="fa fa-plus plus-icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="one-third column offset-by-one-third uk-text-center uk-margin-large-top">
-                            <button class="uk-button uk-button-primary" id="make-bundle-btn">Make Bundle</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h5>Current Bundle Content</h5>
-                        <ol id="current-links">
-                        </ol>
-                    </div>
-                </section>
-            </div>
-            <h1 class="uk-margin-top">Your Bundles:</h1>
-            <div class="">
-                <section id="" class="uk-block-muted">
-                    <ul id="load-Bundles-here">
+    <body id="body-mustache">
 
-                    </ul>
-                </section>
+        <header class="container center-text">
+            <div class="row div-blue">
+                <h1>{{name}}</h1>
+            </div>
+            <div class="row div-white">
+                <p>
+                    {{description}}
+                </p>
+            </div>
+            <div class="header-spacer div-yellow">
+
+            </div>
+        </header>
+        <article class="container" id="article-container">
+            <div class="content-container div-white">
+                <iframe class="" src="https://www.youtube.com/embed/w_gz9MIStu0" width="960px" height="540px" frameborder="0"></iframe>
+            </div>
+            <div class="spacer div-red">
+
+            </div>
+            <div class="content-container div-white">
+
             </div>
         </article>
+        <footer class="container center-text">
+            <div class="row div-yellow">
+                <h5>Made By: First Name Last Name</h5>
+            </div>
+            <div class="row">
+                <a href="tweet" class="one-half column twitter vert-align">
+                    <i class="fa fa-twitter text-white"></i>
+                </a>
+                <a href="facebook" class="one-half column facebook vert-align">
+                    <i class="fa fa-facebook text-white"></i>
+                </a>
+            </div>
+        </footer>
+
     </body>
 </html>

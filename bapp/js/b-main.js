@@ -90,6 +90,7 @@ $(d).ready( function() {
         //then we want to check that there has been some text input in the Bundle Name input
         var makeBundleBtn = d.getElementById('make-bundle-btn');
         var makeBundleName = d.getElementById('bundle-name');
+        var makeBundleDesc = d.getElementById('bundle-description');
 
         //ok so we want to check and see if there is something in the name input field on the button clicked
         $(makeBundleBtn).click(function() {
@@ -99,12 +100,18 @@ $(d).ready( function() {
                 UIkit.modal.alert("Error: You need to add a name to your Bundle!");
                 makeBundleName.setAttribute('class', 'uk-form-danger');
                 makeBundleName.focus();
+            } else if (makeBundleDesc.value === ''){
+                UIkit.modal.alert("Error: You need to add a short description to your Bundle!");
+                makeBundleDesc.setAttribute('class', 'uk-form-danger');
+                makeBundleDesc.focus();
             } else {
                 if(currentLinks.length < 2){
                     UIkit.modal.alert("We suggest you add more content to a Bundle.");
                 } else {
                     //ok we passed all the checks
                     var bundleName = makeBundleName.value;
+                    var bundleDesc = makeBundleDesc.value;
+                    var bundleMaker = user.fields.first_Name +" "+ user.fields.last_Name;
                     var userID = user.id;
                     var useridArr = [];
                     useridArr.push(userID);
@@ -114,7 +121,9 @@ $(d).ready( function() {
                     var cslinks = currentLinks.join(', ');
                     var updateobj = {};
                     updateobj.list_Name = bundleName;
+                    updateobj.description = bundleDesc;
                     updateobj.links = cslinks;
+                    updateobj.owner =  bundleMaker;
                     updateobj.testUsers = useridArr;
                     var sendobj = {};
                     sendobj.fields = updateobj;
@@ -160,7 +169,7 @@ $(d).ready( function() {
                         //now add the alert to the document
                         d.getElementById('alert-container').innerHTML = "<div class='uk-alert' data-uk-alert><a href='' class='uk-alert-close uk-close'></a><p>Added bundle to your Bundles!</p></div>";
                         //now to add it to the users bundles ul on the page
-                        d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/bundles/bundle?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
+                        d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/bapp/bundle?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
                       }
                     });
 
@@ -178,7 +187,7 @@ $(d).ready( function() {
         //ok now we want to load in the user's Bundles
         var usersBundles = JSON.parse(localStorage.getItem('usersBundles'));
         var attachPointBundles = d.getElementById('load-Bundles-here');
-        var usersBundlesTemplate = "<li class=''><a href='http://goexploring.today/bundles/bundle?sharekey={{sharekey}}'> {{name}}</a></li>";
+        var usersBundlesTemplate = "<li class=''><a href='http://goexploring.today/bapp/bundle?sharekey={{sharekey}}'> {{name}}</a></li>";
         var currentadditionelems = "";
         for(var j=0; j<usersBundles.length; j++){
             var renderedbundles = Mustache.render(usersBundlesTemplate, usersBundles[j]);
