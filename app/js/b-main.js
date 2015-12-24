@@ -123,7 +123,7 @@ $(d).ready( function() {
                     updateobj.list_Name = bundleName;
                     updateobj.description = bundleDesc;
                     updateobj.links = cslinks;
-                    updateobj.owner =  bundleMaker;
+                    updateobj.Owner =  bundleMaker;
                     updateobj.testUsers = useridArr;
                     var sendobj = {};
                     sendobj.fields = updateobj;
