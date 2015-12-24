@@ -173,7 +173,7 @@ $(d).ready( function() {
                       }
                     });
 
-                    xhr.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/testLists", true);
+                    xhr.open("POST", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Lists", true);
                     xhr.setRequestHeader("authorization", "Bearer keyIye3zskPSBMQ6Q");
                     xhr.setRequestHeader("content-type", "application/json");
 
