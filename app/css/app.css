@@ -1,0 +1,69 @@
+
+.color-white {
+    background-color: white;
+}
+.color-gray {
+    background-color: #eeeeee;
+}
+html {
+    background-color: #FFB400;
+    min-width: 300px;
+}
+
+.uk-navbar-flip {
+    margin-right: 10px;
+}
+.uk-dropdown {
+    width: 100px;
+}
+
+.plus-button {
+    border: solid 2px #000;
+    border-radius: 2px;
+    height: 50px;
+    width: 50px;
+}
+.plus-button:hover {
+    cursor: pointer;
+}
+
+input {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.plus-icon {
+    position: relative;
+    left: 46%;
+    top: 28%;
+}
+
+.delete-link:hover {
+    cursor: pointer;
+}
+
+.uk-block-muted {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}

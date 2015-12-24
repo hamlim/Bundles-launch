@@ -23,7 +23,7 @@ $(document).ready(function (){
                         //now we also want to get all the lists that the user owns
                         var xhr = new XMLHttpRequest();
                         // xhr.withCredentials = true;
-                        xhr.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/testLists");
+                        xhr.open("GET", "https://api.airtable.com/v0/appqxUoD7s3dL1gtc/Lists");
                         xhr.setRequestHeader("authorization", "Bearer keyIye3zskPSBMQ6Q");
                         xhr.addEventListener("readystatechange", function () {
                             if (this.readyState === 4) {
@@ -46,7 +46,7 @@ $(document).ready(function (){
                                 }
                                 // console.log(usersBundles);
                                 localStorage.setItem('usersBundles', JSON.stringify(usersBundles));
-                                window.location.href = "./changed-app.html";
+                                window.location.href = "./app.html";
                             }
                         });
                         xhr.send();

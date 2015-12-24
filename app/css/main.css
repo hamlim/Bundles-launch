@@ -1,0 +1,18 @@
+
+.color-white {
+    background-color: white;
+}
+.color-gray {
+    background-color: #eeeeee;
+}
+html {
+    background-color: #FFE559;
+    min-width: 300px;
+}
+
+.uk-navbar-flip {
+    margin-right: 10px;
+}
+.uk-dropdown {
+    width: 100px;
+}

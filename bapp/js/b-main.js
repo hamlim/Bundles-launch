@@ -169,7 +169,7 @@ $(d).ready( function() {
                         //now add the alert to the document
                         d.getElementById('alert-container').innerHTML = "<div class='uk-alert' data-uk-alert><a href='' class='uk-alert-close uk-close'></a><p>Added bundle to your Bundles!</p></div>";
                         //now to add it to the users bundles ul on the page
-                        d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/bapp/bundle?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
+                        d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/app/bundle.html?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
                       }
                     });
 
@@ -187,7 +187,7 @@ $(d).ready( function() {
         //ok now we want to load in the user's Bundles
         var usersBundles = JSON.parse(localStorage.getItem('usersBundles'));
         var attachPointBundles = d.getElementById('load-Bundles-here');
-        var usersBundlesTemplate = "<li class=''><a href='http://goexploring.today/bapp/bundle?sharekey={{sharekey}}'> {{name}}</a></li>";
+        var usersBundlesTemplate = "<li class=''><a href='http://goexploring.today/app/bundle?sharekey={{sharekey}}'> {{name}}</a></li>";
         var currentadditionelems = "";
         for(var j=0; j<usersBundles.length; j++){
             var renderedbundles = Mustache.render(usersBundlesTemplate, usersBundles[j]);

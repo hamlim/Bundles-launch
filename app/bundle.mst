@@ -1,0 +1,80 @@
+
+<header class="container center-text">
+    <div class="row div-blue">
+        <h1>{{name}}</h1>
+    </div>
+    <div class="row div-white">
+        <p>
+            {{description}}
+        </p>
+    </div>
+    <div class="header-spacer div-yellow">
+
+    </div>
+</header>
+<article class="container" id="article-container">
+    {{#links}}
+    <div class="content-container div-white">
+        {{#isYoutube}}
+        <iframe class="content" src="//www.youtube.com/embed/{{url}}" width="360" height="270" frameborder="0"></iframe>
+        {{/isYoutube}}
+        {{#isVimeo}}
+        <iframe class="content" src="//player.vimeo.com/video/{{url}}" width="360" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {{/isVimeo}}
+        {{#isVine}}
+        <iframe class="content" src="//vine.co/v/{{url}}/embed/simple" width="360" height="360" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+        {{/isVine}}
+        {{#isGiphy}}
+        <iframe class="content" src="//giphy.com/embed/{{url}}?html5=true" width="360" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        {{/isGiphy}}
+        {{#isStatic}}
+            {{#isVideo}}
+            <video class="content" controls src="{{url}}" height="360" width="270"></video>
+            {{/isVideo}}
+            {{#isImage}}
+            <img class="content" src="{{url}}" height="360" width="360" />
+            {{/isImage}}
+        {{/isStatic}}
+    </div>
+    <div class="spacer div-red">
+
+    </div>
+    {{/links}}
+
+    <!-- <div class="content-container div-white">
+        <iframe class="" src="https://www.youtube.com/embed/w_gz9MIStu0" width="960px" height="540px" frameborder="0"></iframe>
+    </div>
+    <div class="spacer div-red">
+
+    </div>
+    <div class="content-container div-white">
+
+    </div>
+    <div class="spacer div-red">
+
+    </div>
+    <div class="content-container div-white">
+
+    </div>
+    <div class="spacer div-red">
+
+    </div>
+    <div class="content-container div-white">
+
+    </div> -->
+
+    <!-- ... -->
+</article>
+<footer class="container center-text">
+    <div class="row div-yellow">
+        <h5>Made By: {{ownerName}}</h5>
+    </div>
+    <div class="row">
+        <a href="https://twitter.com/share?url=http://goexploring.today/app/bundle.html?sharekey={{sharekey}}&text=Check+out+this+bundle+:+{{name}}" class="one-half column twitter vert-align">
+            <i class="fa fa-twitter text-white"></i>
+        </a>
+        <a href="http://www.facebook.com/sharer.php?u=http://goexploring.today/app/bundle.html?sharekey={{sharekey}}&t={{name}}" class="one-half column facebook vert-align">
+            <i class="fa fa-facebook text-white"></i>
+        </a>
+    </div>
+</footer>
