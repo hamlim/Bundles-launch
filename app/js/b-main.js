@@ -165,6 +165,7 @@ $(d).ready( function() {
                         //     d.getElementsByClassName('activated')[v].parentNode.removeChild(d.getElementsByClassName('activated')[v]);
                         // }
                         makeBundleName.value = '';
+                        makeBundleDesc.value = '';
                         //now clear the ul of the queue
                         d.getElementById('current-links').innerHTML = "";
                         //now add the alert to the document
