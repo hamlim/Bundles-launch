@@ -115,6 +115,7 @@ $(d).ready( function() {
                     var userID = user.id;
                     var useridArr = [];
                     useridArr.push(userID);
+                    console.log(useridArr);
                     //currentLinks is all our links for the bundle
                     //user is the user object
                     // ok so we need to make a string that is comma seperated of all of the links
