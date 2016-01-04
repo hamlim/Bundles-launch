@@ -36,12 +36,19 @@ $(document).ready(function(){
         for(var i=0; i<arrOfLinks.length; i++){
             var obj = {};
             var interest = arrOfLinks[i];
-            if(interest.search('youtube') != -1){
+            if(interest.search('youtu') != -1){
                 //youtube
+                //time to get the url fragment
+                var fragment = getId(interest);
+                if(fragment == false){
+                    var index = interest.search('v=');
+                    index = index + 2;
+                    obj.url = interest.slice(index);
+                } else {
+                    obj.url = fragment;
+
+                }
                 //now we need to get the link, which will be the code following "v="
-                var index = interest.search('v=');
-                index = index + 2;
-                obj.url = interest.slice(index);
                 obj.isYoutube = true;
                 obj.isVimeo = false;
                 obj.isVine = false;
@@ -291,3 +298,14 @@ $(document).ready(function(){
 
 
 });
+
+function getId(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return match[2];
+    } else {
+        return 'error';
+    }
+}
