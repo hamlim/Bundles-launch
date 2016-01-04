@@ -132,6 +132,12 @@ p {
     	height: 100%;
         -webkit-transform: translateZ(0);
     }
+    .content-vine {
+        height: auto;
+    }
+    .content-giphy {
+        height: auto;
+    }
 
 }
 
