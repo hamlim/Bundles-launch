@@ -87,6 +87,7 @@ p {
 .content-container {
     /*height: auto;*/
     /*min-height: 200px;*/
+    overflow: visible;
 }
 /*
     Aspect Ratio Notes:
@@ -114,6 +115,7 @@ p {
     .content-container {
         height: auto;
         min-height: 200px;
+        overflow: visible;
     }
     .content {
         height: auto;
@@ -123,6 +125,7 @@ p {
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        overflow: visible;
     }
     .content-container iframe {
     	position: absolute;
@@ -157,6 +160,7 @@ p {
     .content-container {
         height: auto;
         min-height: 200px;
+        overflow: visible;
     }
     .content {
         height: auto;
@@ -166,6 +170,7 @@ p {
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        overflow: visible;
     }
     .content-container iframe {
     	position: absolute;
@@ -193,6 +198,7 @@ p {
     .content-container {
         height: auto;
         min-height: 200px;
+        overflow: visible;
     }
     .content {
         height: auto;
@@ -202,6 +208,7 @@ p {
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        overflow: visible;
     }
     .content-container iframe {
     	position: absolute;
@@ -229,6 +236,7 @@ p {
     .content-container {
         height: auto;
         min-height: 200px;
+        overflow: visible;
     }
     .content {
         height: auto;
@@ -238,6 +246,7 @@ p {
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        overflow: visible;
     }
     .content-container iframe {
     	position: absolute;
@@ -265,6 +274,7 @@ p {
     .content-container {
         height: auto;
         min-height: 200px;
+        overflow: visible;
     }
     .content {
         height: auto;
@@ -274,6 +284,7 @@ p {
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        overflow: visible;
     }
     .content-container iframe {
     	position: absolute;
@@ -284,4 +295,14 @@ p {
         -webkit-transform: translateZ(0);
     }
 
+}
+
+.embedly-embed {
+    -webkit-transform: translateZ(0);
+}
+.content-image {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    height: auto !important;
 }
