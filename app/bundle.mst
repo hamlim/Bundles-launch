@@ -22,17 +22,17 @@
         <iframe class="content" src="//player.vimeo.com/video/{{url}}" width="360" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         {{/isVimeo}}
         {{#isVine}}
-        <iframe class="content" src="//vine.co/v/{{url}}/embed/simple" width="360" height="360" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+        <iframe class="content-vine" src="//vine.co/v/{{url}}/embed/simple" width="360" height="360" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
         {{/isVine}}
         {{#isGiphy}}
-        <iframe class="content" src="//giphy.com/embed/{{url}}?html5=true" width="360" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <iframe class="content-giphy" src="//giphy.com/embed/{{url}}?html5=true" width="360" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         {{/isGiphy}}
         {{#isStatic}}
             {{#isVideo}}
             <video class="content" controls src="{{url}}" height="360" width="270"></video>
             {{/isVideo}}
             {{#isImage}}
-            <img class="content" src="{{url}}" height="360" width="360" />
+            <img class="content-image" src="{{url}}" height="360" width="360" />
             {{/isImage}}
         {{/isStatic}}
     </div>
