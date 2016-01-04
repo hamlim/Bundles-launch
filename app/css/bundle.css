@@ -41,7 +41,16 @@
 .custom-facebook {
     color: #3b5998;
 }
+
+
+
+
 /*      UTILITY CLASSES     */
+
+
+
+
+
 .center-text {
     text-align: center;
 }
@@ -54,8 +63,16 @@ p {
 .vert-align {
     font-size: 30px;
 }
+
+
+
 /*      CONTENT RELATED CLASSES     */
+
+
+
+
 /* Mobile first queries */
+
 .spacer {
     height: 50px;
 }
@@ -78,23 +95,19 @@ p {
     -webkit-transform: translateZ(0);
 }
 
-
 .container {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
 }
-.content-container {
-    /*height: auto;*/
-    /*min-height: 200px;*/
-}
-/*
-    Aspect Ratio Notes:
-    (1200)/(1600) * (width) = height
 
-*/
 .content {
-    height: 960px;
+    height: 270px;
+    width: 100%;
+}
+
+.content-image {
+    height: auto;
     width: 100%;
 }
 
@@ -112,17 +125,11 @@ p {
         padding-right: 0px;
     }
     .content-container {
-        height: auto;
-        min-height: 200px;
-    }
-    .content {
-        height: auto;
-    }
-    .content-container {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        min-height: 200px;
     }
     .content-container iframe {
     	position: absolute;
@@ -149,17 +156,11 @@ p {
         padding-right: 0px;
     }
     .content-container {
-        height: auto;
-        min-height: 200px;
-    }
-    .content {
-        height: auto;
-    }
-    .content-container {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        min-height: 200px;
     }
     .content-container iframe {
     	position: absolute;
@@ -185,17 +186,11 @@ p {
         padding-right: 0px;
     }
     .content-container {
-        height: auto;
-        min-height: 200px;
-    }
-    .content {
-        height: auto;
-    }
-    .content-container {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        min-height: 200px;
     }
     .content-container iframe {
     	position: absolute;
@@ -221,17 +216,11 @@ p {
         padding-right: 0px;
     }
     .content-container {
-        height: auto;
-        min-height: 200px;
-    }
-    .content {
-        height: auto;
-    }
-    .content-container {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        min-height: 200px;
     }
     .content-container iframe {
     	position: absolute;
@@ -257,17 +246,11 @@ p {
         padding-right: 0px;
     }
     .content-container {
-        height: auto;
-        min-height: 200px;
-    }
-    .content {
-        height: auto;
-    }
-    .content-container {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
     	height: 0;
+        min-height: 200px;
     }
     .content-container iframe {
     	position: absolute;

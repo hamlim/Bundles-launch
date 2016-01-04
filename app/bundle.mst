@@ -14,56 +14,53 @@
 </header>
 <article class="container" id="article-container">
     {{#links}}
-    <div class="content-container div-white">
         {{#isYoutube}}
-        <iframe class="content" src="//www.youtube.com/embed/{{url}}" width="360" height="270" frameborder="0"></iframe>
+        <div class="content-container div-white">
+            <iframe class="content" src="//www.youtube.com/embed/{{url}}" width="360" height="270" frameborder="0"></iframe>
+        </div>
         {{/isYoutube}}
         {{#isVimeo}}
-        <iframe class="content" src="//player.vimeo.com/video/{{url}}" width="360" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="content-container div-white">
+            <iframe class="content" src="//player.vimeo.com/video/{{url}}" width="360" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
         {{/isVimeo}}
         {{#isVine}}
-        <iframe class="content-vine" src="//vine.co/v/{{url}}/embed/simple" width="360" height="360" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+        <div class="special-container-vine div-white">
+            <iframe class="content-vine" src="//vine.co/v/{{url}}/embed/simple" width="360" height="360" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+        </div>
         {{/isVine}}
         {{#isGiphy}}
-        <iframe class="content-giphy" src="//giphy.com/embed/{{url}}?html5=true" width="360" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <div class="content-container div-white">
+            <iframe class="content-giphy" src="//giphy.com/embed/{{url}}?html5=true" width="360" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
         {{/isGiphy}}
+        {{#isImgur}}
+        <div class="special-container-imgur div-white">
+            <iframe class="content-imgur" src="//imgur.com"
+            <blockquote class="content" lang="en" data-id="{{url}}" data-context="false"><a href="//imgur.com/{{url}}">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </div>
+        {{/isImgur}}
+        {{#isGfycat}}
+        <div class="content-container div-white">
+            <iframe class="content" src='https://gfycat.com/ifr/{{url}}' frameborder='0' scrolling='no' width='360' height='270' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
+        </div>
+        {{/isGfycat}}
         {{#isStatic}}
             {{#isVideo}}
-            <video class="content" controls src="{{url}}" height="360" width="270"></video>
+            <div class="content-container div-white">
+                <video class="content" controls src="{{url}}" height="360" width="270"></video>
+            </div>
             {{/isVideo}}
             {{#isImage}}
-            <img class="content-image" src="{{url}}" height="360" width="360" />
+            <div class="special-container-image div-white">
+                <img class="content-image" src="{{url}}" height="360" width="360" />
+            </div>
             {{/isImage}}
         {{/isStatic}}
-    </div>
     <div class="spacer div-red">
 
     </div>
     {{/links}}
-
-    <!-- <div class="content-container div-white">
-        <iframe class="" src="https://www.youtube.com/embed/w_gz9MIStu0" width="960px" height="540px" frameborder="0"></iframe>
-    </div>
-    <div class="spacer div-red">
-
-    </div>
-    <div class="content-container div-white">
-
-    </div>
-    <div class="spacer div-red">
-
-    </div>
-    <div class="content-container div-white">
-
-    </div>
-    <div class="spacer div-red">
-
-    </div>
-    <div class="content-container div-white">
-
-    </div> -->
-
-    <!-- ... -->
 </article>
 <footer class="container center-text">
     <div class="row div-yellow">

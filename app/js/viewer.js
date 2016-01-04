@@ -20,9 +20,11 @@ $(document).ready(function(){
         var arrOfLinks = linkstring.split(', ');
         console.log(arrOfLinks);
 
-        var getTemp = new XMLHttpRequest();
-        getTemp.open('GET', './bundle.mst', true);
-        getTemp.send();
+        var templateSettings = {
+            "async": true,
+            "method": "GET",
+            "url": "./bundle.mst"
+        }
 
         var bundles = {};
         bundles.sharekey = sharekey;
@@ -115,13 +117,11 @@ $(document).ready(function(){
                 } else {
                     //assume its an image
                     obj.isImage = true;
-                    obj.isVideo = false;
                     obj.url = interest;
                     obj.isYoutube = false;
                     obj.isVimeo = false;
                     obj.isVine = false;
                     obj.isStatic = true;
-                    obj.isGiphy = false;
                     links.push(obj);
                 }
             }
@@ -132,12 +132,11 @@ $(document).ready(function(){
         bundles.links = links;
         console.log(bundles);
         console.log(getTemp);
-        getTemp.onreadystatechange = function () {
-            var template = this.responseText;
+        $.ajax(templateSettings).done(function(response){
+            var template = response;
             var rendered = Mustache.render(template, bundles);
             mustacheAttachPoint.innerHTML = rendered;
-        };
-
+        });
 
 
     } else {
@@ -155,9 +154,6 @@ $(document).ready(function(){
           }
         }
 
-        var getTemp = new XMLHttpRequest();
-        getTemp.open('GET', './bundle.mst', true);
-        getTemp.send();
 
         var bundles = {};
         bundles.sharekey = sharekey;
@@ -183,17 +179,16 @@ $(document).ready(function(){
                         var interest = linkArr[i];
                         if(interest.search('youtube') != -1){
                             //youtube
+                            var fragment = getId(interest);
+                            if(fragment == false){
+                                var index = interest.search('v=');
+                                index = index + 2;
+                                obj.url = interest.slice(index);
+                            } else {
+                                obj.url = fragment;
+                            }
                             //now we need to get the link, which will be the code following "v="
-                            var index = interest.search('v=');
-                            index = index + 2;
-                            obj.url = interest.slice(index);
                             obj.isYoutube = true;
-                            obj.isVimeo = false;
-                            obj.isVine = false;
-                            obj.isStatic = false;
-                            obj.isImage = false;
-                            obj.isVideo = false;
-                            obj.isGiphy = false;
                             list.push(obj);
                         } else if(interest.search('giphy') != -1){
                             //giphy
@@ -202,81 +197,83 @@ $(document).ready(function(){
                             // index = index + 2;
                             // obj.url = interest.slice(index);
                             obj.url = interest;
-                            obj.isYoutube = false;
-                            obj.isVimeo = false;
-                            obj.isVine = false;
-                            obj.isStatic = false;
-                            obj.isImage = false;
-                            obj.isVideo = false;
-                            obj.isGiphy = false;
+                            obj.isGiphy = true;
                             list.push(obj);
                         } else if (interest.search('vine') != -1){
                             //Vine
                             var index = interest.search("v/");
                             index = index + 2;
                             obj.url = interest.slice(index);
-                            obj.isYoutube = false;
-                            obj.isVimeo = false;
                             obj.isVine = true;
-                            obj.isStatic = false;
-                            obj.isImage = false;
-                            obj.isVideo = false;
-                            obj.isGiphy = false;
                             list.push(obj);
                         } else if(interest.search('vimeo') != -1){
-                            // console.log("hello?");
                             //vimeo
                             var index = interest.search('.com/');
                             index = index + 5;
                             obj.url = interest.slice(index);
-                            obj.isYoutube = false;
                             obj.isVimeo = true;
-                            obj.isVine = false;
-                            obj.isStatic = false;
-                            obj.isImage = false;
-                            obj.isVideo = false;
-                            obj.isGiphy = false;
+                            list.push(obj);
+                        } else if(interest.search('imgur') != -1 && interest.slice(-3) != "jpg" && interest.slice(-4) != "webm"){
+                            var imgurSettings = {
+                                "async": true,
+                                "crossDomain": true,
+                                "url": "https://api.imgur.com/3/image/j68fSI0",
+                                "method": "GET",
+                                "headers": {
+                                    "authorization": "Client-ID f6d41460653b986"
+                              }
+                            }
+
+                            $.ajax(imgurSettings).done(function (response) {
+                                //ok so now we want to get a valid link
+                                if(response.data.type == "image/gif"){
+                                    //ok we want to load the mp4 of it
+                                    var urlmp4 = response.data.mp4;
+                                    obj.url = urlmp4;
+                                    obj.isStatic = true,
+                                    obj.isVideo = true,
+                                    list.push(obj);
+                                } else {
+                                    //jpg
+                                    var urljpg = response.data.link;
+                                    obj.url = urljpg;
+                                    obj.isStatic = true;
+                                    obj.isImage = true;
+                                    list.push(obj);
+                                }
+                            });
+
+                        } else if(interest.search('gfycat') != -1){
+                            //gfycat
+                            obj.isVideo = true;
+                            obj.isStatic = true;
+                            var myUrl = "//fat.gfycat.com/";
+                            var index = interest.search('.com/');
+                            index = index + 5;
+                            myUrl = myUrl + interest.slice(index) + ".webm";
+                            obj.url = myUrl;
                             list.push(obj);
                         } else {
                             //image/video direct link (static)
                             //ok we need to get the last 3 chars of the URL
                             var filetype = interest.slice(-3);
-                            if(filetype === "mp4"){
+                            if( filetype != "jpg"){
+                                console.log(interest);
                                 obj.isVideo = true;
                                 obj.url = interest;
-                                obj.isImage = false;
-                                obj.isYoutube = false;
-                                obj.isVimeo = false;
-                                obj.isVine = false;
                                 obj.isStatic = true;
-                                obj.isGiphy = false;
                                 list.push(obj);
                             } else {
                                 //assume its an image
                                 obj.isImage = true;
-                                obj.isVideo = false;
                                 obj.url = interest;
-                                obj.isYoutube = false;
-                                obj.isVimeo = false;
-                                obj.isVine = false;
                                 obj.isStatic = true;
-                                obj.isGiphy = false;
                                 list.push(obj);
                             }
                         }
                     }
-                    console.log(list);
                     bundles.links = list;
                     //ok now we render
-                    console.log(bundles);
-                    console.log(getTemp);
-                    getTemp.onreadystatechange = function () {
-                        console.log("huh?");
-                        var template = this.responseText;
-                        var rendered = Mustache.render(template, bundles);
-                        mustacheAttachPoint.innerHTML = rendered;
-                    };
-
                     var templateSettings = {
                       "async": true,
                     //   "crossDomain": true,
@@ -284,9 +281,8 @@ $(document).ready(function(){
                       "method": "GET"
                     }
 
-                    $.ajax(templateSettings).done(function (response) {
-                        console.log(response);
-                        var template = response;
+                    $.ajax(templateSettings).done(function (resp) {
+                        var template = resp;
                         var rendered = Mustache.render(template, bundles);
                         mustacheAttachPoint.innerHTML = rendered;
                     });
