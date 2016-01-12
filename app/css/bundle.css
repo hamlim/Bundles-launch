@@ -68,7 +68,11 @@ p {
 
 /*      CONTENT RELATED CLASSES     */
 
-
+video {
+    background-color: black;
+    max-width: 100%;
+    height: auto;
+}
 
 
 /* Mobile first queries */
