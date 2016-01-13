@@ -27,8 +27,21 @@ $(d).ready( function() {
 
         //ok so we want people to add content, when they click on the .can-click divs
         //a modal pops up that allows them to add content to their bundle
-        $('#plus-button-container').on('click','div.can-click' , function () {
+        $('.plus-button-container').on('click','div.can-click' , function () {
             //ok time to append a small form
+            var parentOfThis = this.parentNode;
+            var numOfButtons = parentOfThis.getElementsByClassName('activated').length;
+            var grandParentElem = this.parentNode.parentNode.parentNode;
+            if(numOfButtons === 5){
+                //ok we need to make a new row
+                var newRow = d.createElement('div');
+                newRow.setAttribute('class', 'row');
+                var btnContainer = d.createElement('div');
+                btnContainer.setAttribute('class', '')
+                grandParentElem.appendChild(newRow);
+            }
+
+
             var newBtn = d.createElement('div');
             newBtn.setAttribute('class', 'plus-button two columns can-click');
             var plusIcon = d.createElement('i');
