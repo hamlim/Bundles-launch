@@ -27,8 +27,11 @@ $(d).ready( function() {
 
         //ok so we want people to add content, when they click on the .can-click divs
         //a modal pops up that allows them to add content to their bundle
-        $('#plus-button-container').on('click','div.can-click' , function () {
+        $('.plus-button-container').on('click','div.can-click' , function () {
             //ok time to append a small form
+            console.log(this);
+            console.log(this.parentNode);
+            console.log(this.parentNode.parentNode);
             var newBtn = d.createElement('div');
             newBtn.setAttribute('class', 'plus-button two columns can-click');
             var plusIcon = d.createElement('i');
