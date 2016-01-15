@@ -100,16 +100,19 @@ $(d).ready( function() {
             //ok so check the input
             if(makeBundleName.value === ''){
                 //error there is no name
-                UIkit.modal.alert("Error: You need to add a name to your Bundle!");
+                notie.alert(3, "Hey wait, you need to add a name to your Bundle!", 4);
+                // UIkit.modal.alert("Error: You need to add a name to your Bundle!");
                 makeBundleName.setAttribute('class', 'uk-form-danger');
                 makeBundleName.focus();
             } else if (makeBundleDesc.value === ''){
-                UIkit.modal.alert("Error: You need to add a short description to your Bundle!");
+                notie.alert(3, "Hey wait, you need to add a description to your Bundle!", 4);
+                // UIkit.modal.alert("Error: You need to add a short description to your Bundle!");
                 makeBundleDesc.setAttribute('class', 'uk-form-danger');
                 makeBundleDesc.focus();
             } else {
                 if(currentLinks.length < 2){
-                    UIkit.modal.alert("We suggest you add more content to a Bundle.");
+                    notie.alert(3, "We suggest that you add more content to your Bundle!", 5);
+                    // UIkit.modal.alert("We suggest you add more content to a Bundle.");
                 } else {
                     //ok we passed all the checks
                     var bundleName = makeBundleName.value;
@@ -172,7 +175,8 @@ $(d).ready( function() {
                         //now clear the ul of the queue
                         d.getElementById('current-links').innerHTML = "";
                         //now add the alert to the document
-                        d.getElementById('alert-container').innerHTML = "<div class='uk-alert' data-uk-alert><a href='' class='uk-alert-close uk-close'></a><p>Added bundle to your Bundles!</p></div>";
+                        notie.alert(1, "Your Bundle was added successfully! Click on the link in 'Your Bundles' below!", 5);
+                        // d.getElementById('alert-container').innerHTML = "<div class='uk-alert' data-uk-alert><a href='' class='uk-alert-close uk-close'></a><p>Added bundle to your Bundles!</p></div>";
                         //now to add it to the users bundles ul on the page
                         d.getElementById('load-Bundles-here').innerHTML = d.getElementById('load-Bundles-here').innerHTML + "<li class=''><a href='http://goexploring.today/app/bundle.html?sharekey="+returnbundle.listID+"'>"+returnbundle.list_Name+"</a></li>";
                       }
