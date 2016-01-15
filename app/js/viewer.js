@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     function getQueryVariable(variable){
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -285,13 +286,14 @@ $(document).ready(function(){
                         var template = resp;
                         var rendered = Mustache.render(template, bundles);
                         mustacheAttachPoint.innerHTML = rendered;
+                        var amount = $(".content-vine").width();
+                        $('.content-vine').css({'height':amount+'px'});
                     });
                 }
             }
         });
 
     }
-
 
 });
 

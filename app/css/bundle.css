@@ -107,6 +107,11 @@ video {
     -webkit-transform: translateZ(0);
 }
 
+.content-vine {
+    width: 100%;
+    height: auto;
+}
+
 .container {
     width: 100%;
     padding-left: 0px;
