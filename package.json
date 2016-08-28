@@ -1,0 +1,29 @@
+{
+  "name": "GoExploringtoday",
+  "version": "1.0.0",
+  "description": "Listing of projects by matthamlin.me",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamlim/hamlim.github.io.git"
+  },
+  "keywords": [
+    "Boilerplate",
+    "defaults"
+  ],
+  "author": "Matt Hamlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamlim/hamlim.github.io/issues"
+  },
+  "homepage": "https://github.com/hamlim/hamlim.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "postcss": "^5.1.1"
+  }
+}
