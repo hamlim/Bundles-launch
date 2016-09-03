@@ -1,7 +1,6 @@
 // _basics.scss
-// _basics.scss
 
-// Opinnionated basics for matthamlin.me
+//  basics for matthamlin.me and other sites
 
 a {
 	text-decoration: none;
@@ -12,17 +11,9 @@ a {
 }
 
 .link {
-	color: $blue;
+	color: $chambray;
 	&:hover {
-		color: $yellow;
-	}
-	&:visited:not(.link--active):not(.link--special) {
-		color: $white;
-		border-bottom: solid 4px $yellow;
-		&:hover{
-			color: $black;
-			border-bottom: solid 4px $green;
-		}
+		color: $jungle-green;
 	}
 	&--active {
 		color: $orange1;
@@ -34,25 +25,6 @@ a {
 			color: $ecstasy;
 		}
 	}
-}
-
-.clr--blue {
-    color: $blue;
-}
-.bg--blue {
-    background-color: $blue;
-}
-.clr--yellow {
-    color: $yellow;
-}
-.bg--yellow {
-    background-color: $yellow;
-}
-.clr--green {
-    color: $green;
-}
-.bg--green {
-    background-color: $green;
 }
 
 .inline-block {

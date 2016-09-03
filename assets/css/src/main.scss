@@ -22,19 +22,193 @@
 }
 .header {
 	background: transparent;
-	color: $green;
+	color: $dodger-blue;
 	width: 100vw;
-	height: 10vh;
-	line-height: 10vh;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 	text-align: center;
+	position: relative;
+	&:after {
+		z-index: -1;
+		content: '';
+		border-right: solid 100vw $riptide;
+		border-left: solid 100vw transparent;
+		border-top: solid 100vh transparent;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	&:before {
+		z-index: -2;
+		content: '';
+		border-left: solid 100vw $cape-honey;
+		border-right: solid 100vw transparent;
+		border-bottom: solid 100vh transparent;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+	}
 }
 
 .project {
 	width: 100vw;
-	height: 20vh;
-	line-height: 20vh;
+	height: 100vh;
+	line-height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	&:nth-child(1) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $jordy-blue;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $riptide;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(2) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $confetti;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $jordy-blue;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(3) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $pumice;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $confetti;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(4) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $flamingo;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $pumice;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(5) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $wistful;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $flamingo;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(6) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $cape-honey;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $wistful;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
 }
-
-h2.no-margin {
-	margin: 0;
+.spaced {
+	display: flex;
+	justify-content: space-between;
+	font-size: 4em;
+	width: 100vw;
 }
