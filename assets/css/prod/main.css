@@ -117,6 +117,7 @@ a:hover, a:active {
 }
 .link:visited:not(.link--active):not(.link--special) {
   color: #ffffff;
+  border-bottom: solid 4px #F4D03F;
 }
 .link:visited:not(.link--active):not(.link--special):hover {
   color: #000000;
@@ -322,7 +323,7 @@ sup {
 }
 
 .body {
-  background: radial-gradient(circle at bottom center, #2ECC71 0%, #ffffff 100%);
+  background: #ffffff;
 }
 
 .page {
@@ -340,20 +341,13 @@ sup {
 }
 
 .project {
-  display: inline-block;
-  width: 50vw;
-  height: 50vh;
-  background: transparent;
-  line-height: 50vh;
+  width: 100vw;
+  height: 20vh;
+  line-height: 20vh;
 }
 
 h2.no-margin {
   margin: 0;
-}
-
-.full-all {
-  width: 100%;
-  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

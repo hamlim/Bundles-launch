@@ -13,7 +13,7 @@
 
 // Generic Styles
 .body {
-	background: radial-gradient(circle at bottom center, $green 0%, $white 100%);
+	background: $white;
 }
 
 .page {
@@ -30,17 +30,11 @@
 }
 
 .project {
-	display: inline-block;
-	width: 50vw;
-	height: 50vh;
-	background: transparent;
-	line-height: 50vh;
+	width: 100vw;
+	height: 20vh;
+	line-height: 20vh;
 }
 
 h2.no-margin {
 	margin: 0;
-}
-.full-all {
-	width: 100%;
-	height: 100%;
 }
