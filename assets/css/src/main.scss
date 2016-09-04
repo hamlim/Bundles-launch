@@ -185,7 +185,7 @@
 		&:after {
 			z-index: -1;
 			content: '';
-			border-right: solid 100vw $cape-honey;
+			border-right: solid 100vw $wax-flower;
 			border-left: solid 100vw transparent;
 			border-top: solid 100vh transparent;
 			position: absolute;
@@ -197,6 +197,30 @@
 			z-index: -2;
 			content: '';
 			border-left: solid 100vw $wistful;
+			border-right: solid 100vw transparent;
+			border-bottom: solid 100vh transparent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+	&:nth-child(7) {
+		&:after {
+			z-index: -1;
+			content: '';
+			border-right: solid 100vw $cape-honey;
+			border-left: solid 100vw transparent;
+			border-top: solid 100vh transparent;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&:before {
+			z-index: -2;
+			content: '';
+			border-left: solid 100vw $wax-flower;
 			border-right: solid 100vw transparent;
 			border-bottom: solid 100vh transparent;
 			position: absolute;

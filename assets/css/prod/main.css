@@ -454,7 +454,7 @@ sup {
 .project:nth-child(6):after {
   z-index: -1;
   content: '';
-  border-right: solid 100vw #FDE3A7;
+  border-right: solid 100vw #F1A9A0;
   border-left: solid 100vw transparent;
   border-top: solid 100vh transparent;
   position: absolute;
@@ -466,6 +466,28 @@ sup {
   z-index: -2;
   content: '';
   border-left: solid 100vw #AEA8D3;
+  border-right: solid 100vw transparent;
+  border-bottom: solid 100vh transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.project:nth-child(7):after {
+  z-index: -1;
+  content: '';
+  border-right: solid 100vw #FDE3A7;
+  border-left: solid 100vw transparent;
+  border-top: solid 100vh transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.project:nth-child(7):before {
+  z-index: -2;
+  content: '';
+  border-left: solid 100vw #F1A9A0;
   border-right: solid 100vw transparent;
   border-bottom: solid 100vh transparent;
   position: absolute;
